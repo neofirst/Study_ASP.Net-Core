@@ -1,0 +1,123 @@
+﻿
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <div>
+            <h3>출력</h3>
+            <ul id="lstTest"></ul>
+        </div>
+        <div>
+            <input type="button" name="btnSearch" id="btnSearch" value="조회" />
+        </div>
+        <div>
+            <input type="text" name="title" id="title">
+            <input type="button" name="btnAdd" id="btnAdd" value="추가" />
+            <input type="button" name="btnModify" id="btnModify" value="수정" />
+            <input type="button" name="btnDelete" id="btnDelete" value="삭제" />
+        </div>
+    </div>
+</body>
+
+
+<script src="/Scripts/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript">
+    
+    var API_URL = "/api/Test";
+
+    //[!] 데이터 조회 전용 함수
+    function displayData() {
+        $('#lstTest').html('');
+        $.getJSON(API_URL + "/Search", function (data) {
+            console.log(data.length); // 데이터의 개수
+            $.each(data, function (key, val) {
+                var str = val.title;
+                $("<ul />", { html: str }).appendTo("#lstTest");
+            });
+        });
+    }
+
+    // Page_Load
+    $(function ()
+    {
+        $("#btnSearch").click(function ()
+        {
+            displayData();
+        });
+    
+        $("#btnAdd").click(function ()
+        {
+            var Title = $('#title').val();
+            var json = "{\"Title\":\"" + Title + "\"}";
+
+            $.ajax({
+                url: API_URL + "/SetData",
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                async: false,
+                data: json,
+                success: function () {
+                    alert("저장 성공");
+                },
+                statusCode: {
+                    200: function (data) {
+                        alert("200코드");
+                    }
+                }
+            }).fail(function (xhr, textStatus, err) {
+                    alert("저장 실패");
+                });
+            displayData();
+        });
+
+        $("#btnModify").click(function () {
+            var Title = $('#title').val();
+            var json = "{\"Title\":\"" + Title + "\"}";
+
+            $.ajax({
+                url: API_URL + "/UpdateData",
+                type: 'PUT',
+                contentType: 'application/json; charset=utf-8',
+                async: false,
+                data: json,
+                success: function () {
+                    alert("수정 성공");
+                },
+                statusCode: {
+                    200: function (data) {
+                        alert("200코드");
+                    }
+                }
+             }).fail(function (xhr, textStatus, err) {
+                    alert("수정 실패");
+                });
+            displayData();
+        });
+
+        $("#btnDelete").click(function () {
+            var Title = $('#title').val();
+            var json = "{\"Title\":\"" + Title + "\"}";
+
+            $.ajax({
+                url: API_URL + "/DeleteData",
+                type: 'DELETE',
+                contentType: 'application/json; charset=utf-8',
+                async: false,
+                data: json,
+                success: function () {
+                    alert("삭제 성공");
+                },
+                statusCode: {
+                    200: function (data) {
+                        alert("200코드");
+                    }
+                }
+            }).fail(function (xhr, textStatus, err) {
+                     alert("삭제 실패");
+                });
+            displayData();
+        });
+    });
+
+</script>

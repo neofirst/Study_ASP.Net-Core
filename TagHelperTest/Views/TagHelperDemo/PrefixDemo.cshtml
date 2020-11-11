@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@tagHelperPrefix "th:"
+@{
+    Layout = null;
+}
+
+<th:environment names="Development">
+    <h3>Development 환경</h3>
+</th:environment>
+
+
+<th:environment names="Staging, Production">
+    <h3>Staging, Production 환경</h3>
+</th:environment>

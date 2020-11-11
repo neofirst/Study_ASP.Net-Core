@@ -1,0 +1,60 @@
+﻿
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <div>
+            <h3>출력</h3>
+            <ul id="lstTest"></ul>
+        </div>
+        <div>
+            <input type="button" name="btnSearch" id="btnSearch" value="조회" />
+        </div>
+        <div>
+            <input type="text" name="title" id="title">
+            <input type="button" name="btnAdd" id="btnAdd" value="추가" />
+        </div>
+    </div>
+</body>
+
+
+<script src="/Scripts/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript">
+    
+    var API_URL = "/api/Test";
+
+    //[!] 데이터 조회 전용 함수
+    function displayData() {
+        $('#lstTest').html('');
+        $.getJSON(API_URL + "/Search", function (data) {
+            console.log(data.length); // 데이터의 개수
+            $.each(data, function (key, val) {
+                var str = val.title;
+                $("<ul />", { html: str }).appendTo("#lstTest");
+            });
+        });
+    }
+
+
+    // Page_Load
+    $(function () {
+            $("#btnSearch").click(function () {
+                displayData();
+            });
+    
+            $("#btnAdd").click(function () {
+                var json = "{\"Title\":\"Andrew\"}";
+                //var Title = $('#title').val();
+
+                $.ajax({
+                    url: API_URL + "/SetData",
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: json    
+                });
+                displayData();
+            });
+    });
+
+</script>

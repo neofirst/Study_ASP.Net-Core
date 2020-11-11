@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "oL0RCk3f5nX4lCU9rVV9daC3/fruZXZN9q8lB52ivjxhrVLYycfynb20TC6qYOgdiKxNu4mrV+qx8qxJsmBflA==",
+  "success": true,
+  "projectFilePath": "f:\\Study\\Source\\ASP.NET CORE\\AngularSPA\\AngularSPA.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Neo\\.nuget\\packages\\angularjs.core\\1.8.0\\angularjs.core.1.8.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\angularjs.route\\1.8.0\\angularjs.route.1.8.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\bootstrap\\4.5.2\\bootstrap.4.5.2.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\bower\\1.3.11\\bower.1.3.11.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\jquery\\3.5.1\\jquery.3.5.1.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\microsoft.typescript.msbuild\\3.9.7\\microsoft.typescript.msbuild.3.9.7.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\node.js\\0.10.28\\node.js.0.10.28.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\nogit\\0.0.8\\nogit.0.0.8.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\popper.js\\1.16.1\\popper.js.1.16.1.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Neo\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

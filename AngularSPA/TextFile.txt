@@ -1,0 +1,3 @@
+﻿install-package angularjs.core
+install-package jquery
+install-package aspnet.scriptmanager.jquery
